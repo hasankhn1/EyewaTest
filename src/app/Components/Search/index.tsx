@@ -14,7 +14,7 @@ const SearchComponent: React.FC = () => {
   const [selectedPerson, setSelectedPerson] = useState<PersonState>()
 
   const loadOptions = async (inputValue: string) => {
-    if (inputValue.length > 2) {
+    if (inputValue.length >= 2) {
       try {
         const { data } = await axios.get(`${SEARCH_API}${inputValue}`);
         setPeople(data.results)
