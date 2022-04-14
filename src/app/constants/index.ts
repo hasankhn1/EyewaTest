@@ -1,0 +1,1 @@
+export const SEARCH_API='https://swapi.dev/api/people/?search='
